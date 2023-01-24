@@ -15,14 +15,14 @@ function Colors() {
         '#77B1A9',
         '#73A857'
       ];
-
-  const [bgColor, setBgColor] = useState(colors);
+console.log(Colors)
+  const [bgColor, setBgColor] = useState();
    const changeColor =()=>{
       let color = Math.floor(Math.random() * colors.length);
       setBgColor(color);
     }
   return (
-    <div style={{background: bgColor}}>
+    <div style={{backgroundColor: colors[bgColor]}}>
 
         <button onClick={changeColor}>Change Color</button>
  

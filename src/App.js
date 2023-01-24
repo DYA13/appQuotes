@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Colors from "./Colors";
-
 import './App.css';
 
 function App() {
 
-  
   const [tips, setTips] = useState("");
   const fetchTips = async () => {
   const response = await fetch(
