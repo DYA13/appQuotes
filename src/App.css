@@ -1,16 +1,13 @@
-
 .container {
-   display: block;
-  margin: 0 auto;
-  background-color: rgb(229, 240, 249);
-  width: 400px;
-  min-height: 270px;
-  margin-top: 250px;
-  border-radius: 10px;
-  
-  
-  }
-  .quote {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(229, 240, 249);
+    width: 400px;
+    min-height: 270px;
+    margin-top: 250px;
+    border-radius: 10px;
+}
+.quote {
     font-size: 1.35em;
     text-align: center;
     margin: 30px;
@@ -18,28 +15,21 @@
     font-family: 'Raleway', sans-serif;
     color: rgb(9, 55, 55);
     font-weight: bold;
-   
-  }
-  .button {
-display: block;
-margin: 0 auto;
-
-
-
-font-weight: 600;
-max-width: 130px;
-height: 38px;
-border: none;
-border-radius: 3px;
-color: #fff;
-background-color: rgb(88, 82, 82);
-outline: none;
-font-size: 0.95em;
-padding: 8px 18px 6px 18px;
-margin-top: 30px;
-opacity: 1;
-cursor: pointer;
 }
-
-
-  
+.button {
+    display: block;
+    margin: 0 auto;
+    font-weight: 600;
+    max-width: 130px;
+    height: 38px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: rgb(88, 82, 82);
+    outline: none;
+    font-size: 0.95em;
+    padding: 8px 18px 6px 18px;
+    margin-top: 30px;
+    opacity: 1;
+    cursor: pointer;
+}
