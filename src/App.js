@@ -1,39 +1,33 @@
-import React, { useState, useEffect } from "react";
-import Colors from "./Colors";
+import React, { useState, useEffect, useCallback } from "react";
+import { changeColor } from "./changeColor";
 import './App.css';
 
 function App() {
 
   const [tips, setTips] = useState("");
-  const fetchTips = async () => {
-  const response = await fetch(
+  const [bgColor, setBgColor] = useState();
 
-      "http://www.boredapi.com/api/activity/"
-
-    );
-
-   const data = await response.json();
-
-   setTips(data.activity);
-
-  };
+  const fetchTips = useCallback(async () => {
+    const response = await fetch("http://www.boredapi.com/api/activity/");
+    const data = await response.json();
+    setTips(data.activity);
+  }, []);
 
   useEffect(() => {
     fetchTips();
-  }, []);
+  }, [fetchTips]);
+
+  const handleFetchTips = () => {
+    changeColor(bgColor, setBgColor);
+    fetchTips();
+  }
 
   return (
-
     <div className="container">
-    <p> {tips} </p>
-      <button onClick={fetchTips}>New quote</button>
-      <Colors/>
+      <p className="quote"> {tips} </p>
+      <button onClick={handleFetchTips} className="button">New quote</button>
     </div>
-
   );
-
 }
-
-
 
 export default App;
